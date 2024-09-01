@@ -1,0 +1,73 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js">
+</script>
+    <link href="style.css" rel="stylesheet" type="text/css" /><script src="script.js"></script>
+<body>
+<style>body{background-image: url("background.jpg");background-repeat: no-repeat;background-size: 100% 100%;font-family: "DM Serif Text", serif; animation:none;transition:all .3s ease;}</style>
+
+<div id="konten"><div id="foto"><div class="image"><img id="photo" src="15.gif" width="200px" height="200px"/></div><span id="sp2"></span></div>
+
+<div id='slider'>
+  <p>Warm greeting, &nbsp;<b id="kamu"></b>!</p>
+  <p>A thing to remember that this letter is only created for a birthday girl named Zainab.</p> 
+  <p>Other than her, you may just sit back and read aloud these wishes I wrote for her.</p>
+  <p> Since today is your special day, permit me to say happy birthday, even though we live far away (Now I miss your presence).</p> 
+  <p>I still recognise you as an inspirational person.</p>
+  <p>You barely miss a chance to create a worthy life for people around you.</p>
+  <p>I'm grateful for the opportunity to witness the life journeys that you've shared on social media.</p>
+  <p>May Allah give you more and more blessings, despite those burdens you ever felt.</p>
+  <p>I wish you'll always be surrounded by kind people like you.</p> 
+  <p>And I hope you have a great experience during your LPDP interview later!</p>
+  <p> Please don't scold me for reminding your interview :/</p>
+  <p>But really, you know who to tell for your result later, right? (Yes, that's me, please let me know also).</p> 
+  <p> Mhm, I think that's all ...</p>
+  <p>Oh, wait!</p>
+  <p>Another thing, tap the cat  <label class='lovein' onClick="duar()">🐱</label></p>
+</div><div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+</div>
+<div id="bodyblur"></div>
+
+<script>  
+var a=0,finish;
+finish = "Let all happiness glide upon your smile as it beams for miles and miles. So, catch it now before it sails away. Someone strong enough to be a woman, someone warm enough to be a friend. For my dearest sister, barakallah fii umrik! — C. A.";
+
+        function play() {
+          var audio = new Audio('wonderfull.mp3');
+          audio.play();
+        }
+            
+ function bukaWa(){window.location = "https://t.me/sugooi"}
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Masukin nama kamu!',
+                    input: 'text',
+                    confirmButtonText: 'next',
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                	window.nama = nama;
+                    finish = finish + ", " + nama + "!";    
+                    document.getElementById("kamu").innerHTML = "" + window.nama;
+                    setTimeout(showDiv, 700);play();                      
+                } else {
+                    await swals.fire('Heh! Jangan dikosongin atuh namanya buru isi 😡');
+                    mulai();
+                }
+            }
+            mulai();
+</script>
+</body>
+</html>
